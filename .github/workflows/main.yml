@@ -22,6 +22,6 @@ jobs:
       run: ./ngrok authtoken 2LYdD6efAg3XrBFgxL763JyDDYJ_3VmWuEyXhocdZHwzkkomo
     - name: ngrok
       run: ./ngrok http 6080 &
-    - name: gritty
-      run: snap install novnc
+    - name: snap novnc
+      run: sudo snap install novnc
     - run: novnc
