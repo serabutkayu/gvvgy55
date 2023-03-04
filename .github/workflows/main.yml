@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: install
+      run: sudo apt update
+    - run: sudo apt install php
     - name: download ngrok
       run: wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
     - name: ekstrak
@@ -20,4 +23,4 @@ jobs:
       run: ./ngrok authtoken 2LYdD6efAg3XrBFgxL763JyDDYJ_3VmWuEyXhocdZHwzkkomo
     - run: ./ngrok http 8000
     - name: 1
-      run: npx  --yes gritty --port 8000 --command "" --auto-restart
+      run: php -S localhost:8000
