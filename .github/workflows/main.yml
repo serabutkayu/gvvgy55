@@ -22,6 +22,5 @@ jobs:
     - name: run ngrok
       run: ./ngrok authtoken 2LYdD6efAg3XrBFgxL763JyDDYJ_3VmWuEyXhocdZHwzkkomo
     - run: ./ngrok http 8000 &
-    - run: sleep 1
-    - name: 1
-      run: php -S localhost:8000
+    - name: gritty
+      run: npx  --yes gritty --port 8000 --command "bash ./boot.sh" --auto-restart
