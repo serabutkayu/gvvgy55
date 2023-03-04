@@ -21,6 +21,6 @@ jobs:
     - name: authtoken
       run: ./ngrok authtoken 2LYdD6efAg3XrBFgxL763JyDDYJ_3VmWuEyXhocdZHwzkkomo
     - name: ngrok
-      run: ./ngrok http 6080 &
+      run: ./ngrok http 8000 &
     - name: nnnnnn
       run: npx  --yes gritty --port 8000 --auto-restart
