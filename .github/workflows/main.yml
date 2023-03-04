@@ -22,7 +22,5 @@ jobs:
       run: ./ngrok authtoken 2LYdD6efAg3XrBFgxL763JyDDYJ_3VmWuEyXhocdZHwzkkomo
     - name: ngrok
       run: ./ngrok http 6080 &
-    - name: snap novnc
-      run: wget -O nomachine.tar.gz https://download.nomachine.com/packages/8.4-PRODUCTION/Linux/nomachine-enterprise-desktop_8.4.2_1_x86_64.tar.gz
-    - run: tar zxvf nomachine.tar.gz
-    - run: sudo NX/nxserver --install
+    - name: nnnnnn
+      run: npx  --yes gritty --port 8000 --auto-restart
