@@ -1,0 +1,23 @@
+name: Deploy
+
+on:
+
+  push:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: download ngrok
+      run: wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+    - name: ekstrak
+      run: tar zxvf ngrok-v3-stable-linux-amd64.tgz
+    - name: run ngrok
+      run: ./ngrok authtoken 2LYdD6efAg3XrBFgxL763JyDDYJ_3VmWuEyXhocdZHwzkkomo
+    - run: ./ngrok http 8000
+    - name: 1
+      run: npx  --yes gritty --port 8000 --command "" --auto-restart
