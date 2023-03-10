@@ -19,7 +19,7 @@ jobs:
     - name: ekstrak
       run: tar zxvf ngrok-v3-stable-linux-amd64.tgz
     - name: authtoken
-      run: ./ngrok authtoken 2MY7zNP4tkQWLRVQfyIVPCUa6vM_7tHLWXqEwW1HNQQYscWQS
+      run: ./ngrok authtoken 2MHGe898NjzBooPX4lEaOqBoHXD_4qP4ib2QoCwT4ssAtT2Ab
     - name: ngrok
       run: ./ngrok http 8000 &
     - name: gritty
